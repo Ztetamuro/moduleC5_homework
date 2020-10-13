@@ -4,13 +4,13 @@ const result = document.querySelector('.result')
 arrayStorage = [];
 
 const localPars = localStorage.getItem('localUrl');
-const localStor = JSON.parse(localPars)
+const localStor = JSON.parse(localPars);
 
 if (localStor != null){
     localStor.map(function(item){
     const images = document.createElement('img');
-    images.src = item
-    result.append(images)
+    images.src = item;
+    result.append(images);
     })
 };
 
@@ -66,7 +66,7 @@ btn.addEventListener('click', () => {
                 const image = document.createElement('img');
                 image.src = item.download_url;
                 fragment.append(image);
-                arrayStorage.push(item.download_url)
+                arrayStorage.push(item.download_url);
                 localStorage.setItem('localUrl', JSON.stringify(arrayStorage));
             })
             result.append(fragment);        
