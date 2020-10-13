@@ -39,13 +39,13 @@ btn.addEventListener('click', () => {
     };
 
     if(heightInput == false && weightInput == false){
-        inner.innerHTML = "Номер страницы и лимит вне диапазона";
+        inner.innerHTML = 'Номер страницы и лимит вне диапазона от 1 до 10';
     }
     else if(heightInput == true && weightInput == false) {
-        inner.innerHTML = 'Лимит вне диапазона';
+        inner.innerHTML = 'Лимит вне диапазона от 1 до 10';
     }
     else if(heightInput == false && weightInput == true){
-        inner.innerHTML = 'Номер страницы вне диапазона';
+        inner.innerHTML = 'Номер страницы вне диапазона от 1 до 10';
     }
     else{ 
         inner.innerHTML = "";
