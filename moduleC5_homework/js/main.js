@@ -5,11 +5,14 @@ arrayStorage = [];
 
 const localPars = localStorage.getItem('localUrl');
 const localStor = JSON.parse(localPars)
-localStor.map(function(item){
+
+if (localStor != null){
+    localStor.map(function(item){
     const images = document.createElement('img');
     images.src = item
     result.append(images)
-})
+    })
+};
 
 
 // Заполнил массив с необходимыми числами диапазона, кривовато
